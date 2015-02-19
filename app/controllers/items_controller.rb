@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :edit, :create, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -27,7 +28,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.new(item_params)
     @item.save
     respond_with(@item)
   end
