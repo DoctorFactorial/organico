@@ -1,0 +1,12 @@
+
+<div class="col-md-3">
+  <div class="thumbnail">
+  	<%= link_to item_path(item) do %>
+    	<%= image_tag "Starry-Starry-Bread.jpg", class: "img-responsive"%>
+  	<% end %>
+  <div class="caption">
+    <p><strong><%= link_to item.name, item_path(item) %></strong></p>
+    <p><%= item.price.to_f / 100 %>€</p>
+  </div>
+  </div>
+</div>
