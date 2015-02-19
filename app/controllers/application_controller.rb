@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 	
 	rescue_from CanCan::AccessDenied do |exception|
-		redirect_to root_path, notice: "No tiene permisos para acceder a este área"
+		redirect_to root_path, notice: "You are not authorised to access this area."
 	end
 end
