@@ -5,31 +5,14 @@
 			Artículos
 			<%= link_to "Nuevo artículo", new_item_path, class: "btn btn-primary btn-sm" %>
 		</h3>
-		<table class="table table-condensed">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Disponible</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-      <% @items.each do |item| %>
-        <tr>
-          <td><%= item.id %></td>
-          <td><%= link_to item.name, item_path(item) %></td>
-          <td><%= item.availability %></td>
-          <td><%= link_to "Editar", edit_item_path(item) %></td>
-        </tr>
-			<% end %>
-		</tbody>
-    </table>
+		<%= render "items"%>
 	</div>
 	<div class="col-md-4">
 		<h3 class="text-center">
 			Compras
 		</h3>
+
+
 	</div>
 	<div class="col-md-4">
 		<h3 class="text-center">
