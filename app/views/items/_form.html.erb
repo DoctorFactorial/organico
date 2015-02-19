@@ -6,8 +6,11 @@
     <%= f.input :seller, required: true, label: false, placeholder: "Nombre del fabricante", input_html: {class: "form-control"} %>
     <%= f.input :description, required: true, label: false, placeholder: "Descripción del Producto", input_html: {class: "form-control"} %>
     <%= f.input :price, required: true, label: false, placeholder: "Precio", input_html: {class: "form-control"} %>
-    <%= f.input :availability, label: "Disponibilidad" %>
-
+    
+	<div class="checkbox text-center">
+    <p>Disponibilidad</p>
+    	<%= f.input :availability, required: false, label: false %>
+	</div>
     <%= f.button :submit, "Crear artículo", class: "btn btn-primary btn-block" %>
 
 <% end %>
