@@ -18,6 +18,6 @@ class Item < ActiveRecord::Base
 	validates :image, attachment_presence: true
 	validates :resource, attachment_presence: true
 
-	validates_numbericality_of :price,
+	validates_numericality_of :price,
 	greate_than: 49, message: "Must be at least 50 cents"
 end

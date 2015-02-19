@@ -1,4 +1,4 @@
-class TransactionController < ApplicationController
+class TransactionsController < ApplicationController
 	def create
 		item = Item.find_by!(slug: params[:slug])
 		token = params[:stripeToken]
