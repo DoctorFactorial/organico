@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    authorize! :manage, @item
   end
 
   def create
@@ -34,11 +35,13 @@ class ItemsController < ApplicationController
   end
 
   def update
+    authorize! :manage, @item
     @item.update(item_params)
     respond_with(@item)
   end
 
   def destroy
+    authorize! :manage, @item
     @item.destroy
     respond_with(@item)
   end

@@ -52,3 +52,6 @@ gem 'simple_form'
 # Adding users gem
 gem 'devise'
 
+# Authorisation
+gem 'cancan'
+
