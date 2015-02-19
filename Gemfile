@@ -55,3 +55,5 @@ gem 'devise'
 # Authorisation
 gem 'cancan'
 
+gem 'paperclip'
+
