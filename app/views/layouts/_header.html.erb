@@ -16,12 +16,12 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Alimentos Orgánicos", "#" %></li>  
+      <li><%= link_to "Alimentos Orgánicos", items_path %></li>  
       <% if current_user %>  
-        <li><%= link_to "Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Ajustes", edit_user_registration_path %></li>
+        <li><%= link_to "Cierre de Sesión", destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
