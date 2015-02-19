@@ -1,20 +1,16 @@
 class TransactionsController < ApplicationController
 	def create
 		item = Item.find_by!(slug: params[:slug])
-		token = params[:stripeToken]
-
-		begin
-			charge = Stripe::Charge.create(
-				amount: item.price,
-				currency: "eur",
-				card: token,
-				description: current_user.email)
-			@sale = item.sales.create!(
-				buyer_email: current_user.email)
-			redirect_to pickup_url(guid: @sale.guid)
-		rescue Stripe::CardError => e
-			@error = e
-			redirect_to item_path(item), notice: @error
+		sale = item.sales.create(
+			amount: item.price,
+			buyer_email: current_user.email,
+			seller_email: item.user.email,
+			stripe_token: params[:stripeToken])
+		sale.process!
+		if sale.finished?
+			redirect_to pickup_url(guid: sale.guid), notice: "Transaction successful"
+		else
+			redirect_to item_path(item), notice: "Something went wrong"
 		end
 	end
 
