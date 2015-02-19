@@ -60,5 +60,5 @@ gem 'paperclip'
 gem 'dotenv-rails', groups: :development
 
 # Amazon communication
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
