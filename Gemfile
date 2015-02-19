@@ -62,3 +62,6 @@ gem 'dotenv-rails', groups: :development
 # Amazon communication
 gem 'aws-sdk', '< 2.0'
 
+# Prettify URLs
+gem 'friendly_id'
+
