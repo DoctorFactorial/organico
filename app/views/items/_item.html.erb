@@ -5,8 +5,9 @@
     	<%= image_tag item.image.url(:original), class: "img-responsive"%>
   	<% end %>
   <div class="caption">
-    <p><strong><%= link_to item.name, item_path(item) %></strong></p>
-    <p><%= item.price.to_f / 100 %>€</p>
+    <p><strong><%= link_to item.name, item_path(item), class: 'link_custom' %></strong></p>
+    <p><%= item.price.to_f / 100 %> €</p>
   </div>
   </div>
 </div>
+

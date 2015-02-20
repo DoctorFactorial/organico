@@ -1,12 +1,21 @@
-<div class="jumbotron">
-<h1>NUESTRA COMIDA ES TU COMIDA</h1>
-<p>Compra comida organica entrega a domicilio</p>
-<%= link_to "Alimentos Orgánicos", items_path, class: "btn btn-primary btn-lg"%>
-<%= link_to "Regístrate", new_user_registration_path, class: "btn btn-primary btn-lg"%>
-</div>
+<div class="background-image">
 
-<div class="row">
+  <div class="container">
+    <div class="col-lg-8 col-lg-offset-2">
+      
+      <div class="jumbotron text-center">
+        <h2>NUESTRA COMIDA ES TU COMIDA</h2>
+        <p>Compra comida organica entrega a domicilio</p>
+        <%= link_to "ALIMENTOS ORGÁNICOS", items_path, class: "btn btn-success btn-block"%>
+        <%= link_to "REGÍSTRATE", new_user_registration_path, class: "btn btn-success btn-block"%>
+      </div>
 
-	<%= render @items %>
+    </div>
+
+    <div class="row">
+      <%= render @items %>
+    </div>
+
+  </div>
 
 </div>

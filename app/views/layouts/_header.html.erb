@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Organico", root_path, class: "navbar-brand"%>
+      <%= link_to "<i class='fa fa-certificate'></i><big> orgánico</big>".html_safe, root_path, {:style=>'color:#FFFFFF;', :class => "navbar-brand"}%>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,14 +16,16 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Alimentos orgánicos", items_path %></li>  
+      <li><%= link_to "ALIMENTOS ORGÁNICOS".upcase, items_path, {:style=>'color:#FFFFFF;'} %></li>  
+      
       <% if current_user %>  
-        <li><%= link_to "Ajustes", edit_user_registration_path %></li>
-        <li><%= link_to "Salpicadero", dashboard_path %></li>
-        <li><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Ajustes".upcase, edit_user_registration_path, {:style=>'color:#FFFFFF;'} %></li>
+        <li><%= link_to "Salpicadero".upcase, dashboard_path, {:style=>'color:#FFFFFF;'} %></li>
+        <li><%= link_to "CERRAR SESIÓN".upcase, destroy_user_session_path, {:style=>'color:#FFFFFF;', :method=> :delete} %></li>
       <% else %>
-        <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
+        <li><%= link_to "Iniciar sesión".upcase, new_user_session_path, {:style=>'color:#FFFFFF;'} %></li>
       <% end %>
+      
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

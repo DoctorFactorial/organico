@@ -1,9 +1,13 @@
 <div class="row">
 	<h1 class="text-center">Salpicadero</h1>
+
+	<div class="text-center">
+		<%= link_to "Nuevo artículo", new_item_path, class: "btn btn-success btn-sm" %>
+	</div>
+
 	<div class="col-md-4">
 		<h3 class="text-center">
 			Artículos
-			<%= link_to "Nuevo artículo", new_item_path, class: "btn btn-primary btn-sm" %>
 		</h3>
 		<%= render "items"%>
 	</div>

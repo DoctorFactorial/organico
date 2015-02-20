@@ -3,9 +3,9 @@
     <%= image_tag @item.image.url(:original), class: "img-responsive" %>
   </div>
   <div class="col-md-6">
-    <h3><%= @item.name %> hecha por <%= @item.seller %> </h3>
+    <h3 class><%= @item.name %> hecha por <%= @item.seller %> </h3>
     <p><%= @item.description %> </p>
-    <h4 class="text-center"><%= @item.price.to_f / 100 %>€</h4>
+    <h4 class="text-right"><%= @item.price.to_f / 100 %>€</h4>
 
     <% if current_user %>
       <%= form_tag buy_path(slug: @item.slug) do %>
