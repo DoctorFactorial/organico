@@ -1,10 +1,11 @@
+<div class="container">
 <div class="row">
   <div class="col-md-6">
     <%= image_tag @item.image.url(:original), class: "img-responsive" %>
   </div>
   <div class="col-md-6">
     <h3 class><%= @item.name %> hecha por <%= @item.seller %> </h3>
-    <p><%= @item.description %> </p>
+    <p class="justify"><%= @item.description %> </p>
     <h4 class="text-right"><%= @item.price.to_f / 100 %>€</h4>
 
     <% if current_user %>
@@ -21,6 +22,8 @@
     <% else %>
       <p>Por favor, primero regístrese para comprar</p>
     <% end %>
+    </div>
   </div>
 </div>
-
+</div>
+</div>
