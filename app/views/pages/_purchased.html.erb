@@ -9,7 +9,7 @@
   <tbody>
   <% @purchased.each do |sale| %>
     <tr>
-      <td><%= link_to sale.item.name, pickup_path(sale.guid) %></td>
+      <td><%= link_to sale.item.name, pickup_path(sale.guid), class: "link_custom" %></td>
       <td><%= time_ago_in_words(sale.created_at) %> ago</td>  
     </tr>
 	<% end %>

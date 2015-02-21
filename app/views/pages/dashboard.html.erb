@@ -1,26 +1,33 @@
-<div class="row">
-	<h1 class="text-center">Salpicadero</h1>
 
-	<div class="text-center">
-		<%= link_to "Nuevo artículo", new_item_path, class: "btn btn-success btn-sm" %>
-	</div>
+<h1 class="center_subheader">Salpicadero</h1>
+<br>
+<div class="text-center">
+	<%= link_to "Nuevo artículo", new_item_path, class: "btn btn-success btn-sm" %>
+</div>
 
-	<div class="col-md-4">
-		<h3 class="text-center">
-			Artículos
-		</h3>
-		<%= render "items"%>
-	</div>
-	<div class="col-md-4">
-		<h3 class="text-center">
-			Compras
-		</h3>
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white-uppercase">
+Artículos
+</h4>
+</div>
+<%= render "items"%>
+</div>
 
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white-uppercase">
+Compras
+</h4>
+</div>
+<%= render "purchased"%>
+</div>
 
-	</div>
-	<div class="col-md-4">
-		<h3 class="text-center">
-			Ventas
-		</h3>
-	</div>
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white-uppercase">
+Ventas
+</h4>
+</div>
+<%= render "sales"%>
 </div>

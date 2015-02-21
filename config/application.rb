@@ -32,5 +32,12 @@ module Organico
             secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
         }
     }
+
+    # Add fonts path
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+
   end
 end

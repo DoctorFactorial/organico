@@ -1,7 +1,7 @@
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-signin" }) do |f| %>
-  <h2 class="text-center">Settings</h2>
+  <h2 class="center_subheader">Ajustes</h2>
   <%= f.error_notification %>
 
 
@@ -11,24 +11,24 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", required: false, label: false, placeholder: "Password", input_html: {class: "form-control"} %>
-    <%= f.input :password_confirmation, required: false, label: false, placeholder: "Password Confirmation", input_html: {class: "form-control"} %>
-    <%= f.input :current_password, required: true, label: false, placeholder: "Current Password", input_html: {class: "form-control"} %>
+    <%= f.input :password, autocomplete: "off", required: false, label: false, placeholder: "Contraseña", input_html: {class: "form-control"} %>
+    <%= f.input :password_confirmation, required: false, label: false, placeholder: "Confirmación de la contraseña", input_html: {class: "form-control"} %>
+    <%= f.input :current_password, required: true, label: false, placeholder: "Contraseña Actual", input_html: {class: "form-control"} %>
 
 
 
-    <%= f.button :submit, "Update", class: "btn btn-success btn-block" %>
+    <%= f.button :submit, "Actualizar", class: "btn btn-success btn-block" %>
 
 <% end %>
 
+<div class="text-center">
+  <h3>Cancelar mi cuenta</h3>
 
-  <h3>Cancel my account</h3>
+  <p>¿Infeliz? <%= link_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Estás seguro?" }, method: :delete, class: "link_custom" %></p>
 
-  <p>Unhappy?</p> 
+  <%= link_to "Back", :back, class: "link_custom" %>
+</div>
 
-  <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-  <%= link_to "Back", :back %>
 
 
 

@@ -36,6 +36,9 @@
     text-decoration: none;
 }
 
-
+.center_subheader{
+  text-align: center;
+  font-family: FontAwesome, Monaco;
+}
 
 

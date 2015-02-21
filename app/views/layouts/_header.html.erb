@@ -23,10 +23,13 @@
         <li><%= link_to "Salpicadero".upcase, dashboard_path, {:style=>'color:#FFFFFF;'} %></li>
         <li><%= link_to "CERRAR SESIÓN".upcase, destroy_user_session_path, {:style=>'color:#FFFFFF;', :method=> :delete} %></li>
       <% else %>
-        <li><%= link_to "Iniciar sesión".upcase, new_user_session_path, {:style=>'color:#FFFFFF;'} %></li>
+        <li><%= link_to "Iniciar SESIÓN".upcase, new_user_session_path, {:style=>'color:#FFFFFF;'} %></li>
       <% end %>
       
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
