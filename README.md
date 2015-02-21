@@ -1,6 +1,8 @@
 orgánico
 ========
 
+![Img](doctorfactorial.github.com/organico/app/assets/images/organico-screenshot)
+
 P2P Marketplace for organic food home deilvery in Spain. 
 
 This is personal project to be beta tested in Córdoba on completion. 
