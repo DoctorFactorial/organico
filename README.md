@@ -11,10 +11,8 @@ Latest production version available here: https://sleepy-fortress-9285.herokuapp
 
 - Explorable inventory of available organic food products; ordered by the most recently added
 - Dashboard with lists of users items [for sale, bought, sold]
-- Social network aspect with users receiving up/down votes for [food quality, delivery]*
-- Action mailers with Gmail and Mandrill*
-
-* to be added 
+- Social network aspect with users receiving up/down votes for [food quality, delivery]
+- Action mailers with Gmail and Mandrill
 
 # Development
 
