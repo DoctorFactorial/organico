@@ -8,9 +8,9 @@ class TransactionsController < ApplicationController
 			stripe_token: params[:stripeToken])
 		sale.process!
 		if sale.finished?
-			redirect_to pickup_url(guid: sale.guid), notice: "Transaction successful"
+			redirect_to pickup_url(guid: sale.guid), notice: "Transacción exitosa"
 		else
-			redirect_to item_path(item), notice: "Something went wrong"
+			redirect_to item_path(item), notice: "Algo salió mal"
 		end
 	end
 
