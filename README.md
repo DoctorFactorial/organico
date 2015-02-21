@@ -1,7 +1,7 @@
 orgánico
 ========
 
-![Img](doctorfactorial.github.com/organico/app/assets/images/organico-screenshot)
+![Img](doctorfactorial.github.com/organico/app/assets/images/organico-screenshot.png)
 
 P2P Marketplace for organic food home deilvery in Spain. 
 
