@@ -16,9 +16,4 @@
  
 
 
-.home-background {
-  background-image: url(asset-path('organico-corn-cloud.jpg')) no-repeat center center fixed;
-  margin: -20px -70px ;
-  background-size: cover;
-  background-size: 100% 100%;
-}
+
