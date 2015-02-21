@@ -16,11 +16,11 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "ALIMENTOS ORGÁNICOS".upcase, items_path, {:style=>'color:#FFFFFF;'} %></li>  
+      <li><%= link_to "PRODUCTOS ORGÁNICOS".upcase, items_path,{:style=>'color:#FFFFFF;'} %></li>  
       
       <% if current_user %>  
         <li><%= link_to "Ajustes".upcase, edit_user_registration_path, {:style=>'color:#FFFFFF;'} %></li>
-        <li><%= link_to "Salpicadero".upcase, dashboard_path, {:style=>'color:#FFFFFF;'} %></li>
+        <li><%= link_to "DASHBOARD".upcase, dashboard_path, {:style=>'color:#FFFFFF;'} %></li>
         <li><%= link_to "CERRAR SESIÓN".upcase, destroy_user_session_path, {:style=>'color:#FFFFFF;', :method=> :delete} %></li>
       <% else %>
         <li><%= link_to "Iniciar SESIÓN".upcase, new_user_session_path, {:style=>'color:#FFFFFF;'} %></li>
